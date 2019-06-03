@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="category">
+	
+	<insert id="insertCategory" parameterType="categoryvo">
+		insert into category values(null, #{title}, #{description}, now(), #{blogId})
+	</insert>
+	
+ 	<select id="getCategoryList" parameterType="string" resultType="categoryvo">
+ 		select a.no, a.title, a.description, count(b.no) as count
+		from category a left outer join post b 
+			on a.no = b.category_no
+		where a.id = #{id}
+        group by a.no
+	</select>
+	
+	<delete id="deleteCategory" parameterType="categoryvo">
+		delete from category where no = #{no}
+	</delete>
+	
+	<select id="checkCategoryNo" parameterType="postvo" resultType="categoryvo">
+		select no from category where no = #{categoryNo}
+	</select>
+
+</mapper>
