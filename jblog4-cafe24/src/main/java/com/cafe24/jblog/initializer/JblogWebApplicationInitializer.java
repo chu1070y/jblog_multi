@@ -15,12 +15,12 @@ public class JblogWebApplicationInitializer extends AbstractAnnotationConfigDisp
 
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
-		return new Class<?>[] {WebConfig.class};
+		return new Class<?>[] {AppConfig.class};
 	}
 
 	@Override
 	protected Class<?>[] getServletConfigClasses() {
-		return new Class<?>[] {AppConfig.class};
+		return new Class<?>[] {WebConfig.class};
 	}
 
 	@Override
