@@ -40,7 +40,7 @@ public class FileUploadService {
 		} catch (IOException e) {
 			throw new RuntimeException("Fileupload error:" + e);
 		}
-		
+		System.out.println("file upload service" + url);
 		return url;
 	}
 
