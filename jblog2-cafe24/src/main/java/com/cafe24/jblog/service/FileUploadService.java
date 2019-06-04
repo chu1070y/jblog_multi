@@ -34,10 +34,12 @@ public class FileUploadService {
 			OutputStream os = new FileOutputStream(SAVE_PATH + "/" + saveFileName);
 			os.write(fileData);
 			os.close();
+			System.out.println("-----1");
 			
 			url = URL + "/" + saveFileName;
 			
 		} catch (IOException e) {
+			System.out.println("-----2");
 			throw new RuntimeException("Fileupload error:" + e);
 		}
 		System.out.println("file upload service" + url);
