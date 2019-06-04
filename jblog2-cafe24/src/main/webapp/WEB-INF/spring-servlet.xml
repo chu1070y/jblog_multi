@@ -21,7 +21,7 @@
 
 	<!-- file upload -->
 	<mvc:resources mapping="/images/**"
-		location="file:/jblog-upload/" />
+		location="file:/root/jblog-upload/" />
 
 	<!-- validator, conservionService, messageconverter -->
 	<mvc:annotation-driven>
