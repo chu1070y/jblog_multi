@@ -10,7 +10,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 @Service
 public class FileUploadService {
-	private static final String SAVE_PATH = "/root/jblog-upload";
+	private static final String SAVE_PATH = "/jblog-upload";
 	private static final String URL = "images";
 	
 	public String restore(MultipartFile multipartFile) {
