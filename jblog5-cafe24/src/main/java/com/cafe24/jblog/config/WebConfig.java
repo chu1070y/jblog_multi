@@ -108,6 +108,6 @@ public class WebConfig implements WebMvcConfigurer{
 	// 파일업로드 저장 경로
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
-		registry.addResourceHandler("/images/**").addResourceLocations("file:./D:/jblog-upload/");
+		registry.addResourceHandler("/images/**").addResourceLocations("file:/jblog-upload/");
 	}
 }
